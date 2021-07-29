@@ -19,7 +19,7 @@ function SinglePost() {
     }, [id])
 
     const deletePost = (id) => {
-        axios.delete(`${process.env.REACT_APP_API}/${id}`).then(res => {
+        axios.delete(`${process.env.REACT_APP_API}/deletePost/${id}`).then(res => {
             history.push('/home');
         }).catch(err => {
             alert(`${err.response.data.message}`);
